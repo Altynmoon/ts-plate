@@ -21,10 +21,10 @@ export function TodoPage() {
         })
     }, [dispatch])
     return (
-        <div>
+        <div  style={{marginTop: "30px"}} >
             <TodoForm onCreate={handleCreate} />
             <TodoList todo = {todo} onTodoChange={handleTodoChanged} />
         </div>
     )
 
-}
+}     

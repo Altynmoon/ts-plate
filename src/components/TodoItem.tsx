@@ -2,6 +2,7 @@ import { Button, Checkbox, styled } from "@mui/material"
 import { FC, useCallback, useMemo } from "react"
 import { useDispatch } from "react-redux"
 import { TodoActionType, Todos } from "../types/todosTypes"
+
 const Title = styled('span') <{done: boolean}>`
     text-decoration: ${(props) => props.done ? 'line-through' : 'none' };
 `

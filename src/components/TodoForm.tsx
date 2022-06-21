@@ -1,13 +1,9 @@
 import { Button, TextField } from "@mui/material";
 import { FC, useCallback, useMemo, useState } from "react";
 import { Todos } from "../types/todosTypes";
-
-type Props = {
-    
+type Props = {    
     onCreate: (todo: Todos) => void
 }
-
-
 export const TodoForm:FC<Props> = ({ onCreate }) => {
     const [text, setText] = useState('')
 
@@ -33,3 +29,4 @@ export const TodoForm:FC<Props> = ({ onCreate }) => {
         </form>
     )
 }
+

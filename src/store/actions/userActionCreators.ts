@@ -12,3 +12,4 @@ export const fetchUsers = () => (dispatch: Dispatch<UserAction>) => {
         dispatch({ type: UserActionType.FETCH_USERS_REJECT, payload: 'Ошибка при загрузке пользователей' })
     })
 }
+

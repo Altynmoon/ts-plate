@@ -1,45 +1,30 @@
+import { Route, Routes } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { CategoriesPage } from './pages/CategoriesPage';
+// import { Navbar } from './components/Navbar';
+import { TodoPage } from './pages/TodoPage';
+import { UserPage } from './pages/userPage';
 
-import { TodoPage } from './pages/todo';
+// import { UsersTask } from './pages/UsersTask';
 
 function App() {
+
   return (
 
     <div className="App">
-      <TodoPage/>
+    <Navbar />
+    <Routes>
+    <Route path="/todo" element={<TodoPage />} />
+    <Route path="/users" element={<UserPage />} />
+    <Route path="/categories" element={<CategoriesPage />} />
+    </Routes>
+            </div>
 
-    </div>
+  //   <div className="App">
+  //   <TodoPage/>
+  // </div>
   );
 }
+
+
 export default App;
-
-
-// import './App.css';
-// import { Routes, Route } from "react-router-dom";
-// import {Navbar} from "./components/Navbar";
-// import {useState} from "react";
-// import { TodoPage } from './pages/todo';
-// import { Provider } from 'react-redux';
-
-// function App() {
-//     const [token, setToken] = useState(localStorage.getItem('idToken'))
-
-//     return (
-//         <Provider value={{ token, setToken }}>
-//             <div className="App">
-//                 <Navbar />
-
-//                 <Routes>
-//                     <Route path="/todo" element={<TodoPage />} />
-//                     {/* <Route path="/movies/:id" element={<MoviePage />} />
-//                     {/* <Route path="/rickandmorty/" element={<RickAndMortyPage />} /> */}
-//                     {/* <Route path="/signin/" element={<SignInPage />} />
-//                     <Route path="/counter/" element={<Counter />} />
-//                     <Route path="/todo" element={<TodoPage />} />
-//                     // <Route path="/shop" element={<ShopPage />} /> */}
-//                 </Routes>
-//             </div>
-//         </Provider>
-//     );
-// }
-
-// export default App;

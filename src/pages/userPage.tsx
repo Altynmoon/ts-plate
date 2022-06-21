@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
+import { UserItem } from '../components/UserItem'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import { useUserActions } from '../hooks/useUserActions'
-import { UserItem } from './UserItem'
 
-
-export function UserList() {
+export function UserPage() {
 
     const { users, error, loading } = useTypedSelector((state) => state.user)
     const { fetchUsers } = useUserActions()
@@ -24,8 +23,9 @@ export function UserList() {
     }
 
     return (
-        <div>
+        <div style={{marginTop: "30px"}}>
             {users.map((user) => <UserItem key={user.id} user={user} />)}
         </div>
     )
 }
+   

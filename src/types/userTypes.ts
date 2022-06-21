@@ -30,3 +30,4 @@ export type FetchUserRejectAction = {
     payload: string
 }
 export type UserAction = FetchUserAction | FetchUserSuccessAction | FetchUserRejectAction
+ 

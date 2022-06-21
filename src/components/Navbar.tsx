@@ -1,38 +1,44 @@
- import * as React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
-// import {useNavigate} from 'react-router-dom'
-// import {useContext} from "react";
-// import {Auth} from "../context/Auth";
+import { AppBar, Box, Button, Container, styled, Toolbar } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
-// export const Navbar = () => {
-//     const navigate = useNavigate()
-//     const {token} = useContext(Auth)
-    
 
-//     return (
-//         <AppBar position="static">
-//             <Container maxWidth="xl">
-//                 <Toolbar disableGutters>
-//                     <Box sx={{flexGrow: 1, display: 'flex'}}>
+const DropBtn  = styled('button')`
+background-color: blue;
+padding: 16px;
+font-size: 16px;
+border: none;
+`
 
-//                         <Button
-//                             onClick={() => navigate('/todo')}
-//                             sx={{my: 2, color: 'white', display: 'block'}}
-//                         >
-//                             Todo 
-//                         </Button>
-        
-                    
-//                     </Box>
-//                 </Toolbar>
-//             </Container>
-//         </AppBar>
-//     );
-// };
+export const Navbar = () => {
+    const navigate = useNavigate()
+    return (
+        <AppBar position="static">
+            <Container maxWidth="xl">
+
+                <Toolbar disableGutters>
+                    <Box sx={{flexGrow: 2, display: 'flex'}}>
+                    <Button
+                            onClick={() => navigate('/todo')}
+                            sx={{my: 2, color: 'white', display: 'block'}}
+                        >
+                            ToDo
+                        </Button>
+                        <Button
+                            onClick={() => navigate('/users')}
+                            sx={{my: 2, color: 'white', display: 'block'}}
+                        >
+                           Users
+                        </Button>
+                        <DropBtn
+                          onClick={() => navigate('/categories')}
+                          sx={{my: 2, color: 'white', display: 'block'}}
+                        >
+                        Categories 
+                        </DropBtn>
+
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
+};    

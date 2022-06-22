@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { CategoriesPage } from './pages/CategoriesPage';
 // import { Navbar } from './components/Navbar';
@@ -7,7 +7,6 @@ import { UserPage } from './pages/userPage';
 // import { UsersTask } from './pages/UsersTask';
 export function App() {
   return (
-    <HashRouter basename="/">
     <div className="App">
     <Navbar />
     <Routes>
@@ -16,9 +15,10 @@ export function App() {
     <Route path="/categories" element={<CategoriesPage />} />
     </Routes>
     </div>
-    </HashRouter>
+  
   );
 }
+
 
 
 

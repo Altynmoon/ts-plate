@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ts-plate/static/js/main.98bf78e5.js",
+    "main.js": "/ts-plate/static/js/main.cad862c0.js",
     "index.html": "/ts-plate/index.html",
-    "main.98bf78e5.js.map": "/ts-plate/static/js/main.98bf78e5.js.map"
+    "main.cad862c0.js.map": "/ts-plate/static/js/main.cad862c0.js.map"
   },
   "entrypoints": [
-    "static/js/main.98bf78e5.js"
+    "static/js/main.cad862c0.js"
   ]
 }
